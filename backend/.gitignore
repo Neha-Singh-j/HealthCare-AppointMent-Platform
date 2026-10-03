@@ -4,6 +4,7 @@ target/
 *.jar
 *.war
 node_modules/
+.env
 # Maven
 .mvn/wrapper/maven-wrapper.jar
 

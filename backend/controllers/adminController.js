@@ -11,11 +11,13 @@ const loginAdmin = async (req, res) => {
     try {
 
         const { email, password } = req.body
-
+        console.log("JWT SECRET EXISTS:", !!process.env.JWT_SECRET);
         if (email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD) {
             const token = jwt.sign(email + password, process.env.JWT_SECRET)
+            console.log("JWT_SECRET LOADED:", !!process.env.JWT_SECRET);
             res.json({ success: true, token })
         } else {
+            console.log("JWT_SECRET LOADED:", !!process.env.JWT_SECRET);
             res.json({ success: false, message: "Invalid credentials" })
         }
 

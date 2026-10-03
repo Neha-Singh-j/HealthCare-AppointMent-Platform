@@ -46,7 +46,12 @@ const Navbar = () => {
        {/* Admin Panel Button */}
 {location.pathname === '/' && (
   <button
-    onClick={() => window.open('http://localhost:5174', '_blank')}
+    onClick={() =>
+  window.open(
+    import.meta.env.VITE_ADMIN_URL || 'http://localhost:5174',
+    '_blank'
+  )
+}
     className='bg-primary text-white text-xs px-4 py-2 rounded-full hover:bg-gray-700 hidden md:block'
   >
     Admin Panel

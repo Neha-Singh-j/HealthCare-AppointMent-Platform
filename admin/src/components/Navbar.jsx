@@ -18,7 +18,8 @@ const Navbar = () => {
     aToken && localStorage.removeItem('aToken')
   }
 const goToUserPanel = () => {
-  window.location.href = 'http://localhost:5174/'
+  window.location.href =
+    import.meta.env.VITE_USER_URL || 'http://localhost:5174/'
 }
 
   const isOnDashboard =

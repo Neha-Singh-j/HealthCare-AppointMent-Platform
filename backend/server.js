@@ -18,7 +18,7 @@ connectCloudinary()
 // middlewares
 app.use(express.json())
 app.use(cors())
-
+console.log("JWT SECRET EXISTS:", !!process.env.JWT_SECRET);
 // api endpoints
 app.use('/api/admin', adminRouter)
 app.use('/api/doctor', doctorRouter)
