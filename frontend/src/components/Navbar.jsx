@@ -48,7 +48,7 @@ const Navbar = () => {
   <button
     onClick={() =>
   window.open(
-    import.meta.env.VITE_ADMIN_URL || 'http://localhost:5174',
+    'https://health-care-appoint-ment-platform-a.vercel.app/' || 'http://localhost:5174',
     '_blank'
   )
 }
