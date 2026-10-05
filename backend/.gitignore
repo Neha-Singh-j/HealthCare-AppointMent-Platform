@@ -42,6 +42,7 @@ application-local.yml
 *.tmp
 *.temp
 
+package-lock.json
 # Java generated files
 hs_err_pid*
 replay_pid*
